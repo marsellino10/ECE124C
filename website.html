@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        food
+    </title>
+
+     <style type="text/css">
+    @import "classstyle.css";
+  </style>
+  <script> 
+function form()                                    
+{ 
+    var firstname = document.forms["RegForm"]["firstName"]; 
+    var lastname = document.forms["RegForm"]["lastName"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var mobilephone = document.forms["RegForm"]["mobilephone"];  
+    var address = document.forms["RegForm"]["Address"]; 
+    var password = document.forms["RegForm"]["Password"];  
+     
+   
+    if (firstname.value == "")                                  
+    { 
+        window.alert("Please enter your firstname."); 
+        firstname.focus(); 
+        return false; 
+    } 
+
+    if (lastname.value == "")                                  
+    { 
+        window.alert("Please enter your lastname."); 
+        lastname.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "" || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)))                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (mobilephone.value == "" || !(/^\d{11}$/.test(mobilephone.value)))                           
+    { 
+        window.alert("Please enter a valid mobilephone number."); 
+        mobilephone.focus(); 
+        return false; 
+    } 
+
+   if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        address.focus(); 
+        return false; 
+    } 
+
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    }   
+
+    if ( !(/^[a-zA-Z0-9!@#$%^&*]{8}$/.test(password.value)) )
+    {
+        window.alert("password must be 8 characters only"); 
+        password.focus(); 
+        return false; 
+    }
+
+    if ( !(/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8}$/.test(password.value))) 
+     {
+        window.alert("password must include one digit at least"); 
+        password.focus(); 
+        return false;
+     }
+     
+    if ( !(/^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8}$/.test(password.value))) 
+     {
+        window.alert("password must include one special character at least"); 
+        password.focus(); 
+        return false;
+     }
+
+     if (!(/^(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8}$/.test(password.value))) 
+     {
+        window.alert("password must include an cappital letter"); 
+        password.focus(); 
+        return false;
+     }
+
+    window.alert("welcome");
+}
+</script> 
+
+</head>
+<body>
+  <div class="titlebox">
+      <h1>
+        <b>
+          food
+        </b>
+      </h1>
+    </div>
+      <h1 style="text-align: center"> REGISTRATION FORM </h1>           
+<form name="RegForm" action="#" onsubmit="return form()" method="post">  
+      
+    <p>FirstName: <input type="text" size=30 placeholder="Enter your firstname" name="firstName"> </p><br>
+    <p>LastName: <input type="text" size=30 placeholder="Enter your lastname" name="lastName"> </p><br>         
+    <p>E-mail Address: <input type="text" size=30 placeholder="Enter your email" name="EMail">  </p><br> 
+    <p>Mopilephone: <input type="text" size=30 placeholder="Enter your mobilephone" name="mobilephone"> </p><br> 
+    <p> Address: <input type="text" size=30 placeholder="Enter your address" name="Address">  </p><br>
+     <p>Password: <input type="text" size=30 placeholder="Enter your password" name="Password"> </p><br> 
+    
+      <p>Gender: 
+        <select> 
+        <option> male  </option>
+            <option> female</option>
+        </select> 
+      </p><br>
+          <p><input type="submit" value="send" name="Submit">      
+        <input type="reset" value="Reset" name="Reset">   
+    </p> 
+    
+</form> 
+
+
+    <div class="navbox">
+  <ul>
+  <li><a href="page1.html">10 reasons to eat real food</a></li>
+  <li><a href="page2.html">Disadvantges of food</li>
+  <li><a href="page3.html">How to be vegetarian</a></li>
+  <li><a href="page4.html">Popular food in each country</a></li>
+</ul> 
+        </div>
+
+</body>
+</html>
+
